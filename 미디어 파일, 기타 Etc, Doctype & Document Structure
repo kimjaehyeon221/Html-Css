@@ -1,0 +1,42 @@
+<audio src = "./assets/audios/kimbug.mp3" loop autoplay></audio>
+
+<audio src = "./assets/audios/kimbug.mp3" controls></audio>
+
+<audio>
+	<source src = "./assets/audios/kimbug.wav" type = "audio/wav">
+	<source src = "./assets/audios/kimbug.mp3" type = "audio/mp3">
+	<source src = "./assets/audios/kimbug.ogg" type = "audio/ogg">
+	<p>
+		당신의 브라우저를 버리시고 크롬을 사용하시는게 어떨까요?
+	</p>
+</audio>
+
+<video src = "./assets/video/kimbug.mov" controls></video>
+
+<video loop autoplay>
+	<source src = "./assets/video/kimbug.mov" type ="video/mp4">
+	<source src = "./assets/video/kimbug.mp4" type = "video/mp4">
+  <p>
+		당신의 브라우저를 버리시고 크롬을 사용하시는게 어떨까요?
+	</p>
+</video>
+
+<iframe src = "https://edu.groom.io">
+</iframe>
+<p>
+	you are ADHD <abbr title = "Attention Hyperactivity Disorder">ADHD</abbr>?
+</p>
+
+<address>
+	<h1>
+		김버그 1.물리적 주소, 2. url, 3.sns 등등
+	</h1>
+	<a href = "~~~~~"></a>
+</address>
+
+<pre>
+	<code>
+		console.log("hello kimbug');
+			var kimbug = 'kimbug'
+	</code>
+</pre>

@@ -1,0 +1,41 @@
+<form action ="" method = "GET">
+	<input type = "radio" name = "subscription" value = "on" id = "subscribed"/ >
+	<label for = "subscribed">구독중</label>
+	<input type = "radio" name = "subscription" value = "off" id = "unsubscribedsubscribed"/ >
+	<label for = "unsubscribed">비구독중</label>
+	<button type = "submit">
+		Submit
+	</button>
+</form>
+
+<h1>
+	사용 가능 언어
+</h1>
+<form action = "" method = "GET">
+	<input type = "checkbox" name = "skills" value = "html" id = "html" />
+	<label for = "html">HTML</label>
+	<input type = "checkbox" name = "skills" value = "CSS" id = "CSS" />
+	<label for = "CSS">CSS</label>
+	<input type = "checkbox" name = "skills" vlaue = "JavaScript" id = "JavaScript" />
+	<label for = "JavaScript">JavaScript</label>
+	<button type = "submit">
+		Submit
+	</button>
+</form>
+
+<form action = "" method = "GET">
+	<label for =" ">skills</label>
+	<select multiple name = "skills" id= "skills">
+		<option value = "html" >HTML</option>
+		<option value = "CSS" >CSS</option>
+		<option vlaue = "JavaScript" >JavaScript</option>
+	</select>
+	<button type = "submit">
+		Submit
+	</button>
+</form>
+
+<form>
+	<label for = "field">자기소개:</label>
+	<textarea id = "field" placeholder = "자기소개를 입력하세요"></textarea>
+</form>

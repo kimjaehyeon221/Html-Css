@@ -1,0 +1,28 @@
+// kimbug - Html + Css 강의 기반 연습용 코드
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width = device-width, initial-scale = 1.0"><!-- 유동적인 화면 조정 -->
+		<meta name = "author" content = "김버그">
+		<meta name = "description" content = "~~~~~">					<meta name = "keywords" content = "김버그, 구름강의, 구름Edu">
+		<title>
+			김버그의 버그없는 html, css
+			<!--title을 잘싸는 방법은? 함축적으로.
+			-->
+		</title>
+		<link rel="stylesheet" href="./style.css">
+		<link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>	
+		<!--<style>
+			h1{
+				color: red;
+			}
+		</style>-->
+	</head>
+	<body>
+		<h1>kimbug</h1>
+		<script> src ="./app.js" </script>
+		<!-- 스크립트 파일은 바디의 마지막 부분에 넣는것이 좋다 왜냐하면 자바스크립트는 멈춰버리기 때문에 헤드에 두면 바디를 읽지 못한다-->
+		<p style = "font-family: 'Spoqa Han Sans Neo', 'sans-serif'; ">안녕하세요 김버그입니다.</p>
+	</body>
+</html>

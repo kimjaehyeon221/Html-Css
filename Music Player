@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<title>Music Player</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	
+	<body>
+		<ol class="music-player">
+			<li class="music-player-item">
+				<img src="https://m.media-amazon.com/images/I/814Rp76DidL._SS500_.jpg" 
+					 alt="러브 엑스 마키나"
+					 lang = "ko"
+					 class= "music-album-cover">
+			</li>
+			<div class="music-info-detail">
+				<h1>
+					<span lang = "ko">러브 엑스 마키나</span> Love Ex Machina
+				</h1>
+				<strong>MLSL (밀레니엄 살롱) </strong>
+				<span>
+					<span class = "sr-only">04:09</span>
+				</span>
+				<oudio src = "./assets/music-1.mp3" class="music-oudio"></oudio>
+			</div>
+		</ol>
+		<script src ="./app.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
+

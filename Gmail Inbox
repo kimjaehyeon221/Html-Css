@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" />
+		<title>Gmail Inbox</title>
+		<link rel="stylesheet" href="./style.css" />
+	</head>
+	
+	<body>
+		<table>
+			<thead class ="sr-only">
+				<tr class = "unread">
+					<th scope = "col">Actions</th>
+					<th scope = "col">Sender</th>
+					<th scope = "col">Title</th>
+					<th scope = "col">Timestamp</th>
+				</tr>
+			</thead>
+			<tbody>
+				<td>
+					<div class = "inbox-action">
+					<div class = "inbox-checkbox">
+					<input type="checkbox" id ="inbox-1"/>
+					<label for = "inbox-1">select this email</label>
+					</div>
+					<button type = "button" class = "inbox-star">
+						<span class = "sr-only">Add to favorites</span>
+					</button>
+					</div>
+				</td>
+				<td>Goorm edu</td>
+				<td>
+				<a href="">
+					<strong class = "sr-only">Unread:</strong>
+					<strong>Rate your course: FRONTEND 101 WITH KIMBUG</strong>
+				Rate your course: FRONTEND 101 WITH KIMBUG
+					<span>
+					- Woohyeon. How’s everything going? We want to hear your opnion on...
+					</span>
+				</a>
+				</td>
+				<td>
+					3:34 PM
+				</td>
+			</tbody>
+		</table>	
+		<table>
+			<thead class ="sr-only">
+				<tr class= "read">
+					<th scope = "col">Actions</th>
+					<th scope = "col">Sender</th>
+					<th scope = "col">Title</th>
+					<th scope = "col">Timestamp</th>
+				</tr>
+			</thead>
+			<tbody>
+				<div class = "inbox-action">
+					<div class = "inbox-checkbox">
+					<input type="checkbox" id ="inbox-1"/>
+					<label for = "inbox-1">select this email</label>
+					</div>
+					<button type = "button" class = "inbox-star">
+						<span class = "sr-only">Add to favorites</span>
+					</button>
+				</div>
+				<td>Goorm edu</td>
+				<td>
+				<a href="">
+					<strong class = "sr-only">read:</strong>
+					<strong>Rate your course: FRONTEND 101 WITH KIMBUG</strong>
+				Rate your course: FRONTEND 101 WITH KIMBUG
+					<span>
+					- Woohyeon. How’s everything going? We want to hear your opnion on...
+					</span>
+				</a>
+				</td>
+				<td>
+					3:34 PM
+				</td>
+			</tbody>
+		</table>	
+		<script src = "./app.js"></script>
+	</body>
+</html>
+
+
+
+
+
+
+

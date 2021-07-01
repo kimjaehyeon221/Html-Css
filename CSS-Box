@@ -1,0 +1,120 @@
+//1. Box-model  
+.box {
+    width: 300px;
+    height: 300px;
+    margin: 40px;
+    border-top: 4px #000 solid;
+    border-bottom: 10px #000 solid;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    padding-top: 20px;
+    padding-left: 30px;
+    background-color: aqua;
+}
+
+// 속기형
+.box {
+    width: 300px;
+    height: 300px;
+    padding: 10px 20px 30px 40px;
+    margin: 20px 40px;
+    background-color: aqua;
+}
+
+
+//2. Box-sizing
+// 클래스 선택자 -> CSS선택자 지칭 
+<div class ="box">
+    Hello CSS
+</div>
+
+--> CSS 에서는 . 찍기 
+
+//일일이 조절해야하는 문제가 생김 패딩값이 컨텐트값에 더해져서 
+//즉 width와 height는 content box에만 해당함
+.box {
+    width: 430px;
+    height: 440px;
+    padding: 40px 50px;
+    background-color: aqua;
+    color: white;
+}
+
+--> 해결방법
+//*은 모든 class에 대해서 
+*{
+    box-sizing: border-box;
+}
+
+.box {
+    border: 4px solid black;
+    width: 480px;
+    height: 480px;
+    padding-top: 40px;
+    padding-left: 50px;
+    background-color: aqua;
+    color: white;
+}
+
+//3. What is Box
+Box Type -> Box Model
+Block Inline Inline Block Flex
+
+//4. Display -> Box Type -> Box model
+Block -> 길막
+width 지정 안하면 -> content box 100% -> div
+      지정 하면 -> 남은 공간은 margin으로 자동으로 채움 
+height 선언하지 않을 경우 -> 자식 요소의 height의 합 = 부모의 height
+
+
+*{
+    box-sizing: border-box;
+}
+
+.parent{
+    background-color: white;
+}
+
+.child{
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    background-color: orange;
+}
+
+.other{
+    width: 100px;
+    background-color: red;
+}
+
+//.5 Inline Box
+inline -> 흐름 
+//span ex = <span>펭귄의 종류는 17종 혹은 18종</span>
+//bottom , top 설정 -> inline 요소 xx
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    color: #212529;
+}
+
+span{
+    padding-left: 40px;
+    padding-right: 100px;
+    color: #fff;
+    background-color: #0066ff;
+}
+
+//.6 Inline Box
+흐르는 동시에 영역도 잡을 수 있음
+
+span{
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 100px;
+    color: #fff;
+    background-color: #0066ff;
+}

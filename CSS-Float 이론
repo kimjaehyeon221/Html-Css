@@ -3,13 +3,13 @@
 ※Float를 사용하면 어떻게 변하는지
 1. 한 부모에 있는 자식(block)을 float시킬 경우, 그 자식은 위로 붕 뜨게되며 부모에게는 없는 취급을 받게됨(집나간 자식 취급)
    그렇게 되면서 나머지 자식들은 빈 공간을 채우게 되며, 부모의 height역시 빠진 자식만큼 줄어들게됨. 
-2.특정 box를 Float하게되면 block으로 신분이 상승함.(inline, inline block 모두 block으로 변경됨)
+2.특정 box를 Float하게되면 block으로 신분이 상승함.(inline, inline box 모두 block으로 변경됨)
   그렇게되면 width와 height같은 값을 줄 수 있게됨.
 3. 하지만 길막을 하지 못하는 block이됨. 
   3-1.width값을 주지 않은 상태에서 block을 Float할 경우 가지고 있는 content(내용물)만큼의 크기를 가지지게 됨.
   3-2. float를 사용하면 block사용시 자동으로 들어오는 margin값도 들어오지 않게됨.
 4. float 나만 볼수 있음
-block 박스들은 folat 된 녀석들을 없는 박스로 취급을 하지만 텍스트나 이미지 같은 인라인 성격을 가진 친구들은 float의 존재를 안다.
+block 박스들은 float 된 녀석들을 없는 박스로 취급을 하지만 텍스트나 이미지 같은 인라인 성격을 가진 친구들은 float의 존재를 안다.
 (다른 block요소들은 float 영역을 잡을 수 없지만, block안에 있는 content들은 float에 영향을 받아 layout이 무너져버림)
 
 ※Float를 사용한 이후 붕괴된 Layout을 복구하는법.

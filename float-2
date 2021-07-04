@@ -57,7 +57,7 @@
   }
   
   /* ▼ WHERE YOUR CODE BEGINS */
-  .clearfix::after{
+  .clearfix::after{  //클래스에 추가하여 모든 요소에 적용
       content: '';
       display: block;
       clear: both;

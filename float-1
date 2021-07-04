@@ -1,0 +1,82 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Float 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <ul class = "tap-menu">
+      <li class = "tap-menu-item">
+        <a href="#">Summary</a>
+      </li>
+      <li class = "tap-menu-item selected">
+        <a href="#" >Emails</a>
+      </li>
+      <li class = "tap-menu-item">
+        <a href="#">Files</a>
+      </li>
+      <li class = "tap-menu-item">
+        <a href="#">Mentions</a>
+      </li>
+    </ul>
+  </body>
+</html>
+
+//css
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    height: 100px;
+    font-family: "Roboto", sans-serif;
+    letter-spacing: -0.02em;
+    background-color: black;
+  }
+  
+  a {
+    font-size: 18px;
+    line-height: 20px;
+    color: #8492a6;
+    text-decoration: none;
+  }
+  
+  /* ▼ WHERE YOUR CODE BEGINS */
+  
+  ul {
+      list-style-type: none;
+      padding-left: 0; 
+  }
+
+  .tap-menu {
+      max-width: 550px;
+      border-bottom: 1px solid gray;
+      background-color: white;
+  }
+
+  .tap-menu::after{
+      content: '';
+      display: block;
+      clear: left;
+  }
+
+  .tap-menu-item {
+      float: left;
+      margin-left: 16px;
+  }
+
+  .tap-menu-item a {
+      display: block;
+       padding: 16px 20px;
+  }
+
+  .tap-menu-item.selected a {
+      color: blue;
+      font-weight: 500;
+      border-bottom: 2px solid blue;
+  }

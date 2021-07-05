@@ -1,0 +1,25 @@
+  .tab-menu {
+    display: flex;
+    /*flex-direction: row;*/  --> 기본값들이기 때문에 따로 적어주지 않아도 괜찮다.
+    /*flex-wrap: nowrap;*/
+    /*justify-content: flex-start;*/ 
+    align-items: center;
+    padding-left: 0;
+    border-bottom: 1px solid #e5eaef;
+    list-style-type: none;
+  }
+ 
+ .card {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .card-user {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+  }

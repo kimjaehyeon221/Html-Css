@@ -1,0 +1,69 @@
+flexbox 1. 나 플렉스박스 쓸거임
+        2. 가로 세로 정렬 
+        3. 무조건 한 줄 안에 정렬?
+        4. 플렉스 박스 파리 타임~
+        
+step 1.
+display : flex;
+-> 내가 정렬을 하고자 하는 부모한테 정렬을 해줘야 함. 
+
+step 2.
+flex-direction: row;
+-> 가로 방향으로 정렬하고 싶을 때
+flex-direction: colum;
+-> 세로 방향으로 정렬하고 싶을 때 
+
+두 개의 축(Axis)가 달라진다.
+Main axis, Cross axis 가 생긴다.
+
+flex-direction: row-reverse; 
+-> 오른쪽에서 왼쪽으로 
+
+flex-direction: colum-reverse;
+-> 아래에서 위로 흐름 
+
+Main-axis 
+-> justify-content
+
+Cross-axis
+->align-items
+->align-content
+
+step 3.
+flex-wrap: nowrap; 
+-> 감싸지 않고 자식의 사이즈를 줄여서라도 한 줄로 정렬해버림
+flex-wrap: wrap;
+-> 한 줄에 모두 정렬하기에 공간이 넉넉하지 않으면 여러 줄을 만들어 버림. 
+
+stap 4. 
+이제 씐나게 사용하기만 하면 된다.
+
+ex) 
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+justify-content: flex-start; (왼쪽 정렬 왼쪽에서 시작되니까)
+(flex-end; 끝에 정렬)
+(flex-center; 가운데 정렬)
+(space-around; 공간을 나누어서 정렬 )
+
+display: flex;
+flex-direction: column; (위아래로 정렬)
+flex-wrap: nowrap;
+justify-content: flex-start; 
+
+align-items (하나의 cross axis를 기준으로 정렬)
+align-content의 사용 (두개를 기준으로 정렬)
+flex-wrap이 wrap이 되어야함. (줄이 두개가 생김)
+
+--> space-between 속성을 사용할 수 있음. 
+--> space-around 속성을 사용할 수 있음.
+
+order
+-> 순서를 바꿀 수 있음 
+-> 각각의 개체에 적용하기. 
+
+
+
+
+

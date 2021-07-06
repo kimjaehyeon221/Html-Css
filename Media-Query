@@ -1,0 +1,158 @@
+//html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@700;900&family=Poppins:wght@700&disnplay=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <aside class="banner">
+      <h1 class="banner-title">
+        <a href="#">
+          🚗 모집 임박! 8월 게스트 신청하기
+        </a>
+      </h1>
+    </aside>
+
+    <section class="landing">
+      <h1 class="landing-title">
+        <strong lang="en">Eat, pray, work</strong>
+        김버그의<br />
+        디지털노마드 민박<br />
+        #치앙마이<br />
+        #8월예약오픈
+      </h1>
+      <a href="#" class="landing-link">
+        민박 둘러보기
+      </a>
+    </section>
+  </body>
+</html>
+//css
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .landing {
+    background-image: url("./assets/img-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .landing-title {
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+    color: #fff;
+  }
+  
+  .landing-title strong {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  .landing-link {
+    line-height: 1;
+    color: #fff;
+  }
+  
+  .banner-title a {
+    color: #1f2d3d;
+  }
+  
+  /* ▼ WHERE YOUR CODE BEGINS */
+
+  .banner {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: #FFC82C;
+  }
+  
+  .banner-title a{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    width: 100%;
+    height: 64px;  /*자식의 높이 값은 부모의 높이 값으로 상속된다.*/
+  } /* a 고쳐주기*/
+
+  .landing {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 20px; /*margin이 아닌 padding*/
+    width: 100%;
+    height: 100vh;
+  }
+
+  .landing-title {
+    font-size: 32px;
+    text-align: right;
+    margin-bottom: 24px;
+  }
+
+  .landing-link {
+    display: flex; /* a 는 원래 inline tag라 width height가 먹지 않는다.*/
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    height: 52px;
+    border: 2px solid white ;
+    border-radius: 16px;
+    font-size: 15px;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  @media screen and (min-width: 768px) {
+    .banner {
+      bottom: auto;
+      top: 0;
+    }
+
+    .banner-title a{
+      height: 80px; 
+    }
+  
+
+    .landing {
+      align-items: center;
+    }
+  
+    .landing-title {
+      font-size: 50px;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+  
+    .landing-link {
+      width: 180px;
+      height: 56px;
+      font-size: 18px;
+    }
+  }

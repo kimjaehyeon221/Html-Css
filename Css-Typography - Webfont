@@ -1,0 +1,22 @@
+Webfont는 가져다 쓰는 방법 // 직접 쓰는 방법
+body 부분에 font-family를 적용하면 모든 부분에 적용이 가능하다.
+
+//직접 쓰는 방법 
+@font-face{
+    font-family: "kimbug";  // ~ 라고 임의적 결정
+    font-style: normal; //가끔 italic만을 위한 글자체가 있다.
+    font-weight: 400;
+    src: url()
+}
+
+
+--> Css tricks
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('webfont.eot'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}

@@ -1,0 +1,21 @@
+background-color 
+hex rgb rgba
+
+background-image 
+url('./assets/heart.pmg')
+1. 자체적으로 가지고 있는 파일 
+2. 퍼오기
+
+background-repeat
+repeat -> 기본값으로 들어간다.
+no-repeat ->반복해서 들어가지 않는다. 
+
+background-size
+contain cover custom
+
+background-position 
+x y
+background-position: center center ;
+background-position: 80% 50%;
+background-size: auto 80%;
+

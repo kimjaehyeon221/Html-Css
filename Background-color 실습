@@ -1,0 +1,233 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <article class="card">
+      <div class="card-image">
+        <button type="button" class="like-button" aria-label="Like this property"></button>
+      </div>
+
+      <div class="card-content">
+        <header class="card-header">
+          <div class="property-type">
+            <strong class="plus-badge">Plus</strong>
+            <span>Entire apartment</span>
+          </div>
+
+          <div class="property-rate">
+            <strong aria-label="Review: 4.97">
+              4.97
+            </strong>
+            <span aria-label="Total 203 reviews">(203)</span>
+          </div>
+        </header>
+
+        <h1 class="card-title">
+          Unwind in a Bright Space with Rustic Accents
+        </h1>
+
+        <div class="card-detail">
+          <dl class="property-detail">
+            <div>
+              <dt class="sr-only">Rooms and beds</dt>
+              <dd>
+                <span>2 guests</span>
+                <span>1 bedroom</span>
+                <span>1 bed</span>
+                <span>1 bath</span>
+              </dd>
+            </div>
+
+            <div>
+              <dt class="sr-only">Amenities</dt>
+              <dd>
+                <span>Wifi</span>
+                <span>Kitchen</span>
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>
+
+
+//css
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.card{
+    display: flex;
+    width: 840px;
+    height: 240px;
+    padding: 24px;
+}
+
+.card-content{
+    flex-grow: 1;
+}
+
+.card-image{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    border-radius: 6px;
+    margin-right: 24px;
+    background-image: url(./assets/img-house.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.card-image .like-button{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    background-image: url(./assets/icon-favorite.svg);
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left top;
+    cursor: pointer;
+}
+
+.card-image.vertical img{
+    width: 100%;
+    height: auto;
+}
+
+.card-image.horizontal img{
+    width: auto;
+    height: 100%;
+}
+/*어떤 이미지를 보내줄지 모른다.*/
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+
+
+.like-button {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+
+.property-type span{
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 400px;
+    color:  #7D858F;
+}
+
+.plus-badge{
+    flex: inline-block;
+    padding: 1px 8px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.42857142857;
+    font-weight: 500px;
+    color:  #FFFFFF;
+    text-transform: uppercase;
+    background-color: #92174D;
+    margin-right: 6px;
+}
+
+.property-rate{
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+.property-rate strong{
+    font-weight: 400;
+    color:  #151B26;
+}
+
+.property-rate span{
+    color:  #7D858F;
+}
+
+.property-rate ::before{
+    content: '';
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    width:16px;
+    height: 16px;
+    background-image: url(./assets/icon-star.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+
+
+.card-title{
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 400px;
+    color:  #151B26;
+    margin-bottom: 16px;
+}
+
+
+.property-detail{
+    font-size: 14px;
+    line-height: 1.14285714286;
+    font-weight: 400px;
+    color:  #7D858F;
+}
+
+.sr-only {
+    position: absolute;
+    overflow: hidden;
+    z-index: -100px;
+    width: 1px;
+    height: 1px;
+    opacity:  0;
+}
+
+.property-detail dd span::after{
+    content: '.';
+    margin: 0 8px;
+}
+
+.property-detail dd span:last-child::after{
+    content: '';
+    margin: 0 8px;
+}
+
+.property-detail:first-child{
+    margin-bottom: 8px;
+}
+
+
+
+
+

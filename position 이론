@@ -1,0 +1,37 @@
+Position 
+static relative absolute fixed sticky(모든 브라우저에 지원되지 않음)
+
+Type -> 기준점 
+-> top, bottom, left, right
+
+static relative 
+
+#static 
+모든 요소의 position 값 
+가장 일반적인 상태 
+
+#relative 
+float는 집 나간 장식 relative는 집은 나갔지만 가족 구성원의 역할은 하고 있다.
+
+#absolute -> float랑 유사하다. 
+1. 블록으로 신분 상승
+2. 길막을 못하는 블록이 됨
+3. inline 컨텐츠의 행태 -> float는 inline 컨텐츠가 float를 알아서 피해다녔는데 이에 반해 그렇지 않다 
+
+absoulute 무엇을 기준으로 하는가? 
+1.자신을 감싸고 있는 부모들 중에서 자신이 임의적으로 선택할 수 있음 
+2.position이 static이 아닌 요소로 자신의 기준점을 선택 할 수 있음 
+3. 주변 요소에 영향을 끼치지 않는 relative를 잡는 것이 현명하다. 
+
+
+#fixed
+-> absoulute와 유사하다. 
+but, Viewport를 기준으로 한다. 
+
+-> position top, bottom, right, left
+1. top와 bottom의 하나 right, left 중에 하나. 
+
+z-index:1 , z-index: 2
+ 
+
+

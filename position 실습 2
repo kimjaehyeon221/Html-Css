@@ -1,0 +1,137 @@
+//Html
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Position 2</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:400,500,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="card-carousel">
+        <img src="./assets/img-card.jpg" alt="그랜드캐년" />
+        <button type="button" aria-label="이전" id="prev"></button>
+        <button type="button" aria-label="다음" id="next"></button>
+      </div>
+      <div class="card-content">
+        <h1>
+          그랜드캐년+앤텔롭+홀슈밴드 자유일정
+        </h1>
+        <span>
+          김버그트래블
+        </span>
+
+        <strong>
+          <span>
+            1인
+          </span>
+          180,000원
+        </strong>
+      </div>
+    </div>
+  </body>
+</html>
+
+
+//Css
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.02em;
+  }
+  
+  h1 {
+    font-size: 22px;
+    font-weight: 500;
+    color: #1f2d3d;
+    line-height: 1.4545454545;
+  }
+  
+  span {
+    font-size: 14px;
+    font-weight: 400;
+    color: #7d858f;
+    line-height: 1.5;
+  }
+  
+  strong {
+    font-size: 22px;
+    color: #2860e1;
+    line-height: 1.0909090909;
+  }
+  
+  strong span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #525d69;
+    line-height: 1.5;
+  }
+  
+  button {
+    display: block;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: transparent;
+  }
+  
+  #prev {
+    background-image: url(./assets/icon-backward.svg);
+  }
+  
+  #next {
+    background-image: url(./assets/icon-forward.svg);
+  }
+
+  .card {
+      width: 400px;
+  }
+
+  .card-carousel{
+      position: relative;
+  }
+
+  .card-carousel img{
+      display: block;
+      width: 100px;
+      height: auto;
+  }
+
+  #prev,
+  #next{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%) ; /*항상 기준이 자기 자신이다 */
+    /*시작점이 가운데이기 때문에 오차가 발생한다. 그래서 transform으로 오차를 맞춰줘야 한다.*/
+  }
+
+  #prev{
+      left: 0;
+  }
+
+  #next{
+      right: 0;
+  }
+
+  .card-content{
+      padding: 12px;
+  }
+
+  .card-content h1{
+      margin-bottom: 2px;
+  }
+
+  .card-content strong {
+      display: block;
+      margin-top: 8px;
+      text-align: right;
+  }

@@ -1,0 +1,84 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Posaition 1</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="user-card">
+      <div class="user-photo">
+        <img src="./assets/user.jpg" alt="Kimbug" />
+        <span class="user-status" aria-label="Active"></span>
+      </div>
+      <h1 class="user-name">
+        Kimbug
+      </h1>
+    </div>
+  </body>
+</html>
+
+
+
+
+//Css
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  h1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #273444;
+  }
+
+  .user-card {
+      width: 240px;
+      padding: 8px 12px;
+      border: 1px solid white;
+      border-radius: 4px;
+  }
+
+  .user-card::after{
+      content: '';
+      display: block;
+      clear: left;
+  }
+
+  .user-photo,
+  .user-name{
+      float: left;
+  }
+
+  .user-photo{
+      position: relative;
+      margin-left: 12px;
+  }
+
+  .user-photo img {
+      display: block;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+  }
+
+  .user-status{
+      position: absolute;
+      right: -2px;
+      bottom: -2px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background-color: #21D891;
+  }
+

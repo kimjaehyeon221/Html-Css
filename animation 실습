@@ -1,1 +1,106 @@
+//Html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Muli&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="loading">
+      <h1 class="loading-title">Loading...</h1>
+      <div class="progress-bar" aria-hidden="true">
+        <span class="progress-bar-gauge"></span>
+      </div>
+    </section>
+  </body>
+</html>
 
+
+//Css
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Mulish', sans-serif;
+}
+
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 216px;
+}
+
+.loading-title{
+    margin-bottom: 20px;
+    width: 80px;
+    height: 24p;
+    font-size: 18px;
+    line-height: 1.33333333333;
+    color: #151b26;
+    text-align: center;
+    animation-name: loading;
+    animation-duration: 1600ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.progress-bar{
+    position: relative;
+    width: 380px;
+    height: 12px;
+    background-color: #E5EAEF;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.progress-bar-gauge{
+    position: absolute;
+    width: 0;
+    height: 12px;
+    left: 0px;
+    top: 0px;
+    border-radius: 100px;
+    background-color:  #13CE66;
+    animation-name: guage;
+    animation-duration: 1600ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+}
+
+@keyframes loading {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes guage {
+    0%{
+        width: 0;
+        opacity: 1;
+    }
+
+    80%{
+        width: 100%;
+        opacity: 1;
+    }
+
+    100%{
+        width: 100%;
+        opacity: 0;
+    }
+    
+}

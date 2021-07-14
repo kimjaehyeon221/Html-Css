@@ -1,0 +1,21 @@
+4. 동적 가상 클래스 선택자
+
+가상 클래스 -> 어떤 상태나 조건을 만족했을 때 사용할 수 있는 선택자이다. 
+
+a:hover{
+  background-color: blue;
+}
+
+a:active{
+  background-color: purple;
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+input: focut {
+  border-color: blue;
+}
+

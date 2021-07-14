@@ -1,0 +1,57 @@
+Transition 
+property duration [timing-function] [delay]
+
+1,000ms === 1s
+
+ex)
+transtion: font-size 2500ms;
+
+timing-function 
+변화의 속도. 
+-> ease-in ease-out ease-in-out cubic-bezier(사이트 참조해서 사용하기)
+
+delay 
+-> 가끔의 변화가 몇 초 후에 일어났으면 좋겠는지. 
+
+그리고 변화를 줄 대상을 각각 따로 적용할 수 있다.
+
+
+Animation 바꾸지 않더라도 생동감을 줄 수 있음. 
+<--> transition 전환에서 사용하는 것 
+
+anymation-name: move-box;
+animation-duration: 2000ms;
+animation-timing-function: ease-in-out;
+animation-delay: 1000ms;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+
+@keyframes move-box {
+  from {                            /*%로 진행하여야 된다. */
+    top: 0px;
+    background-color: blue;
+  }
+  
+  to{
+    top: 200px;
+    background-color: red;
+  }
+}
+
+
+timing-function 
+-> transtion이랑 같다. 
+
+-->Css는 mdn 사이트 확인해보기!
+
+
+
+
+
+
+
+
+
+
+
+

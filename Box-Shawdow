@@ -1,0 +1,21 @@
+Box Shadow
+border와는 다르게 순서를 지켜야한다.
+x y 흐린정도 그림자사이즈 색상 
+
+
+.cancel-button {
+    background-color: red;
+    transition: box-shadow 250ms ease-in;
+}
+
+.cancel-button:hover {
+    box-shawdow: 0 10px 16px 0 rgba(255, 73, 73, 0.35);
+}
+
+.cancel-button {
+    background-color: green;
+    box-shawdow: 0 10px 16px 0 rgba(19, 206, 105, 0.35);
+}
+
+neumorphism.io -> google
+/*그림자 사이즈, 그리고 그 다음에 흐린 정도 생략 가능하다.*/

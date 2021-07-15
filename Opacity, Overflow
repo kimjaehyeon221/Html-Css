@@ -1,0 +1,14 @@
+Opacity 
+0~~~1
+
+Overflow
+what is the overflow -> 넘쳐나는 부분에 대하여 
+visible ,auto, scroll, hidden
+
+visible -> 기본 값
+auto와 scroll-> scroll바가 생김 
+hidden은 보이지 않음, 숨김 처리 
+
+overflow-x: scroll
+overflow-y: hidden
+-> 따로따로 정의가 가능하다. 

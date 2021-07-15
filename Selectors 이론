@@ -1,0 +1,112 @@
+Selectors
+--> 몽땅 다 선택해버려라!!!
+
+1.Type, Class & ID Selector
+1.Type -> html을 선택하는 것 
+2.Class -> class를 선택하기 .box -> . 찍기!!
+class는 같은 class를 가지고 있는 아이들 즉 여러개를 선택할 수 있다. 
+.box-0.box-1  -> 2개의 클래스가 붙어있다면 하나를 의미하는 것이다.
+              -> 띄어있다면 클래스가 2개이다. 
+3.ID selector identify -> #kimbug
+단 한명밖에 없음 
+
+
+Child, Descendant & Sibling Combinations
+-->자식 선택자, 자손 선택자, 형제 선택자
+
+--> 자식은 직접적인 후손 자손은 간접적인 후손
+--> 한부모에서 같은 계층의 자식
+
+2.parent ㅁ child
+Child combinators -> 꺽쇠가 있음
+Descendant Combinators -> 꺽쇠가 없음 공백으로 남겨두기 
+Sibling Combinators -> + ~
+
+ex) 자기 같은 레벨의 나머지 녀석들에게 
+.active ~ li{
+    color: blue;
+}
+
+ex) 자기 같은 레벨의 다음 한 녀석에게만 
+.active + li {
+    color: red;
+}
+
+3. 구조적 가상 클래스 선택자(Structural Pseudo-classes)
+가상 클래스 -> 어떤 상태나 조건을 만족했을 때 사용할 수 있는 선택자이다. 
+
+element: first-child
+ex)여섯가지 li중에 첫번째 li
+li:first-child{
+    color: blue;
+}
+
+element: last-child
+ex)여섯가지 li중에 마지막 li
+li:last-child{
+    color: yellow;
+}
+
+element:nth-child
+ex)여섯가지 li중에 세번째 li
+li:nth-child(3){
+    color: yellow;
+}
+
+ex)여섯가지 li중에 짝수
+li:nth-child(2n){
+    color: yellow;
+}
+
+ex)여섯가지 li중에 홀수
+li:nth-child(2n-1){
+    color: yellow;
+}
+
+
+4. 동적 가상 클래스 선택자
+가상 클래스 -> 어떤 상태나 조건을 만족했을 때 사용할 수 있는 선택자이다. 
+
+a:hover{   --> 마우스를 가져다 대었을 때 
+  background-color: blue;
+}
+
+a:active{    --> 눌렀을 때 느낌을 전달하기 위해서 button is active
+  background-color: purple;
+}
+
+input {
+  outline: none;
+  box-shadow: none;
+}
+
+input: focus {   -> focus된 상태에 
+  border-color: blue;
+}
+
+input: active{
+  border-color: blue;  (연한 색으로 처리하여)
+}
+
+5. Css 선택자 올림픽 -> 우선순위에 대하여 
+1. 나중에 선언된 녀석이 앞에 있는 녀석을 덮어버린다. 
+cas-cade = 작은 폭포 -> 다 덮어버림
+
+2. 더 중요한 rule = css 선택자 rule
+올림픽 -> 1. 금메달 순위 2. 메달 총 갯수로
+Css는 1번 rule을 따른다. 
+금메달은 ID
+은메달은 Class Pseudo-clss
+동메달은 Type -> html tag ex)div p span
+
+3.Rule Breakers
+1. inline Style 
+html 파일에 직접 style을 선택하는 것. -> 지양하기 
+
+2. !important -> 이게 제일 강하게 적용한다.
+ex)
+
+p{
+    color: red !important;  --> 띄어쓰기 유의하기 
+}
+

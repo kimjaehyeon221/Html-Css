@@ -1,0 +1,25 @@
+transform -> translate() scale() rotate()
+
+1. translate(x,y)
+-> 원래의 위치에 대해서 기억한다. 즉 다른 주변의 영역에 영향을 주지 않는다. 
+transform: translate(40px, 50px);
+transform: translateX(40px);
+transform: translateY(40px);
+transform: translate(100%, 100%);
+-> 자기 자신을 기준으로 width와 height만큼 움직인다. 
+
+2.scale(N)
+scale(N)
+scale(x, y)
+
+3.rotate(Ndeg) --> degree의 약자
+transform: rotate(45deg)
+--> margin을 주어도 신경을 쓰지 않는다.  
+
+
+Visibility
+visible --> 기본 값
+hidden --> 영역은 차지하고 있음 
+
+display: none; -> 박스의 타입이 없다. 없는 존재처럼 취급하라. 
+visibility : hidden -> 박스의 영역은 차지하고 있고 안보일 뿐이다. 

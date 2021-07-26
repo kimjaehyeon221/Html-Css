@@ -1,0 +1,758 @@
+//html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./grid.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="landing col-12 col-md-12">
+                <div>
+                    <h1>
+                        Change your career, Change your life
+                    </h1>
+                    <p>Get ahead with expert-led training in frontend development</p>
+                </div>
+                <div class = "landing-button">
+                    <button type = "button" id = "ap">Apply now</button>
+                    <button type = "button" id = "lm">Learn more</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+           <div class="service">
+                <div class="service-examine col-12 col-md-6">
+                    <div>
+                        <h2>Master the Fundamentals while Exploring new Tech</h2>
+                        <p>We tech cutting-edge tech Full Stack Javasript as well as Computing Science fundamentals.</p>
+                    </div>
+                </div>
+                <div class="service-examine col-12 col-md-6">
+                    <div>
+                        <h2>Develop Production Level Web Application</h2 >
+                        <p>You put your knowledge into action with carefully designed assignments and personal software engineering projects.</p>
+                    </div>
+                </div>
+           </div>
+        </div>
+
+        <div class="program row">
+            <div class="col-12 col-md-12">
+                <div class="program-examine">
+                    <header>
+                        <span class = "category">Program</span>
+                        <h1 class = "title">Frontend Dev. Immersive Course</h1>
+                        <p class = "description">your best course for career transformation in front-end development. 
+                        This full-time bootcamp features expert instruction, one-on-one career coaching,
+                        and connections to top employers to get you hired.</p>
+                    </header>
+                </div>   
+            </div>
+            <div class="program-image" id ="program-image-1" col-12 col-md-4>
+                <img src="./assets/img-fulltime-campus.png" alt="Full-Time On Campus">
+                <span class = "program-image-examine">Full-Time On Campus</span>
+            </div>
+            <div class="program-image" id ="program-image-2" col-12 col-md-4>
+                <img src="./assets/img-fulltime-remote.png" alt="Full-Time Remote">
+                <span class = "program-image-examine">Full-Time Remote</span>
+            </div>
+            <div class="program-image"  id ="program-image-3" col-12 col-md-4>
+                <img src="./assets/img-parttime-flex.png" alt="Full-time Flex">
+                <span class = "program-image-examine">Part-Time Flex</span>
+            </div>
+        </div>
+
+        <div class="curriculum row">
+            <div class="curriculum-examine col-12 col-md-6">
+                <header>
+                    <span class = "category">Curriculum</span>
+                    <h1 class = "title">Dive into the web development</h1>
+                    <p class = "description">Dive into the software development environment and the basics of computing, networks, and data structures</p>
+                    <button type = "button" class = "landing-button">Learn more</button>
+                </header>
+            </div>
+            <div class="curriculum-img col-md-6">
+                <img src="./assets/img-curriculum.png" alt="curriculum.png">
+            </div>
+
+            <div class="curriculum-detail col-12 col-md-6">
+                <p><strong>Real-World Projects.</strong> Solve challenges that professional engineers face as you work individually and in teams with designers.</p>
+            </div>
+            <div class="curriculum-detail col-12 col-md-6">
+                <p><strong>individually Instructor Support.</strong> Get gudiance, feedback, and more during scheduled one-on-one check-ins</p>
+            </div>
+        </div>
+
+        <div class="subscription row">
+            <div class="subscription-image col-12 col-md-5">
+                <img src="./assets/img-banner.png" alt="img-banner.png">
+            </div>
+            <div class="subscription-examine  col-12 col-md-7">
+                <header>
+                    <h1>Stay with us</h1>
+                    <p>Subscribe to our email newsletter to stay up to date on the lastest updates</p>
+                </header>
+                <form action="" method = "GET">
+                    <input type="text" placeholder = "  Enter your email" onfocus="this.placeholder=''"onblur="this.placeholder='  Enter your email'" >
+                    <button type = "submit">
+                        Get started
+                    </button>
+                    <span>Cancel any time Check out <a href="">Terms of Use</a></span>
+                </form>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class = "footer col-12 col-md-12">
+                <footer>
+                    <button type ="button">
+                        Terms
+                    </button>
+                    <button type ="button">
+                        Privacy
+                    </button>
+                    <button type ="button">
+                        License
+                    </button>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+//css
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+}
+
+/*Reset CSS*/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+}
+
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+    outline: none;
+    box-shadow: none;
+}
+
+ol, ul, li {
+	list-style: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #2b292d;
+    letter-spacing: -0.01em;
+}
+/*Mobile*/
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDDED8;
+    padding-top: 150px;
+    padding-bottom:150px;
+}
+
+.landing h1 {
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -5%;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.landing p {
+    font-size: 16px;
+    line-height: 1.375;
+    letter-spacing: -1%;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 24px;
+}
+
+.landing-button {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    font-size: 15px;
+    line-height: 1.6;
+    letter-spacing: -5%;
+    font-weight: 400;
+}
+
+#ap {
+    display: block;
+    width: 140px;
+    height: 48px;
+    background-color: #3040C4;
+    color: white;
+    border: none;
+    outline:none;
+    border-radius: 2px;
+    margin-right: 8px;
+}
+
+#ap:hover {
+    box-shadow : 3px 3px 20px gray;
+}
+
+#lm {
+    display: block;
+    width: 140px;
+    height: 48px;
+    border: none;
+    outline:none;
+    background-color: white;
+    color:  #3040C4;
+    border-radius: 2px;
+}
+
+#lm:hover {
+    box-shadow : 3px 3px 20px gray;
+}
+
+
+.service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    place-content: center;
+    background-color: #F4F5F7;
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.service-examine h2 {
+    font-size: 22px;
+    line-height: 1.36363636364;
+    letter-spacing: -4%;
+    font-weight: 700;
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.service-examine p {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -1%;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.program {
+    background-color: white;
+    padding-top: 80px;
+    padding-bottom: 68px;
+}
+
+.program header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.category {
+    display: block;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -1%;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.program-examine span {
+    color: #009B4D;
+}
+
+.title {
+    font-size: 34px;
+    line-height: 1.05882352941;
+    letter-spacing: -3%;
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.description {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: -1%;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 32px;
+}
+
+.program-image {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 290px;
+    height: 291px;
+    border-radius: 8px;
+    box-shadow : 1px 1px 10px rgb(201, 201, 201);
+    padding: 0;
+    margin: 20px 15px;
+}
+
+.program-image:hover{   
+    background-color: #3141C5;
+    box-shadow : 3px 3px 20px gray;
+}
+
+#program-image-1 img{
+    display: block;
+    width: 142.21px;
+    height: 195px;
+}
+
+
+#program-image-2 img{
+    display: block;
+    width: 146.06px;
+    height: 197.02px;
+}
+
+#program-image-3 img{
+    display: block;
+    width: 122.4px;
+    height: 195px;
+}
+
+
+.program-image-examine {
+    display: block;
+    position: relative;
+    bottom: -16px;
+    font-size: 18px;
+    line-height: 1.33333333333;
+    font-weight: 700;
+    letter-spacing: -2%;
+}
+
+.curriculum {
+    padding-top: 80px;
+    padding-bottom: 80px;  
+}
+
+.curriculum-examine {
+    margin-bottom: 64px;
+}
+
+.curriculum-examine span {
+    color:  #0189D1;
+}
+
+
+.curriculum-examine button {
+    display: block;
+    width: 140px;
+    height: 48px;
+    background-color: #3040C4;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    outline:none;
+}
+
+.curriculum-examine button:hover {
+    box-shadow : 3px 3px 20px gray;
+}
+
+.curriculum-img {
+    display: none;
+}
+
+.curriculum-detail p {
+    font-size: 15px;
+    line-height: 1.46666666667;
+    letter-spacing: -1%;
+    text-align: left;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.subscription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #F2F8FA;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.subscription-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 290px;
+    height: 240px;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.subscription-image img {
+    display: block;
+    width: 191.48px;
+    height: 190px;
+}
+
+
+
+.subscription-examine h1 {
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -5%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.subscription-examine p {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -1%;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.subscription-examine form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.subscription-examine form input {
+    width: 100%;
+    display: block;
+    height: 48px;
+    background-color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -1%;
+    text-align: left;
+    color: #7B7B7E;
+    border-radius: 2%;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 12px;
+}
+
+
+.subscription-examine form button {
+    width: 100%;
+    display: block;
+    height: 48px;
+    background-color: #3040C4;
+    font-size: 15px;
+    line-height: 1.46666666667;
+    font-weight: 400;
+    letter-spacing: -5%;
+    text-align: center;
+    color: white;
+    border-radius: 2%;
+    border: none;
+    box-shadow: none;
+    margin-bottom: 12px;
+}
+
+.subscription-examine form button:hover {
+    box-shadow : 3px 3px 20px gray;
+}
+
+
+
+.subscription-examine form span {
+    font-size: 13px;
+    line-height: 1.53846153846;
+    font-weight: 400;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.subscription-examine form span a{
+    color: blue;
+    text-decoration: underline;
+}
+
+.footer footer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.footer button {
+    display: block;
+    background-color: white;
+    border: none;
+    outline:none;
+    color: #807F81;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.57142857143;
+    letter-spacing: -1%;
+    margin-bottom: 8px;
+}
+
+
+
+/* >= 768px(Desktop) */
+@media  screen and (min-width: 768px) {
+    /* Reset CSS*/
+    p {
+        font-size: 12px;
+        line-height: 1.3636363636;
+    }
+
+    .landing h1 {
+        font-size: 70px;
+        line-height: 1.028571428571429;
+        margin-bottom: 32px;
+    }
+    
+    .landing p {
+        margin: 0 auto;
+        width: 370px;
+        font-size: 22px;
+        line-height: 1.454545454545455;
+        margin-bottom: 32px;
+    }
+    
+    .landing-button {
+        font-size: 18px;
+        line-height: 1.555555555555556;
+    }
+    
+    #ap {
+        width: 160px;
+        height: 56px;
+        margin-right: 16px;
+    }
+    
+    #lm {
+        width: 160px;
+        height: 56px;
+    }
+    
+    .service {
+        flex-direction: row;
+    }
+    
+    .service-examine h2 {
+        font-size: 22px;
+        line-height: 1.307692307692308;
+    }
+    
+    .service-examine p {
+        font-size: 22px;
+        line-height: 1.454545454545455;
+    }
+    
+    .program {
+        padding-bottom: 100px;
+    }
+
+    .category {
+        font-size: 22px;
+        line-height: 1.090909090909091;
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    .title {
+        font-size: 34px;
+        line-height: 1.05882352941;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .description {
+        font-size: 22px;
+        line-height: 1.454545454545455;
+        text-align: center;
+        margin-bottom: 72px;
+    }
+
+    .program-image {
+        height: 299px;
+    }
+
+    .curriculum {
+        padding-bottom: 98px;  
+    }
+
+    .curriculum-examine {
+        margin-bottom: 66px;
+    }
+
+    .curriculum-examine span {
+        text-align: left;
+    }
+
+    .curriculum-examine h1 {
+        text-align: left;
+    }
+
+    .curriculum-examine p {
+        text-align: left;
+    }
+
+    .curriculum-examine button {
+        width: 160px;
+        height: 56px;
+    }
+
+    .curriculum-img {
+        display: block;
+        width: 450px;
+        height: 450px;
+    }
+
+    .curriculum-img img {
+        width: 425px;
+        height: 426px;
+    }
+
+    .curriculum-detail p {
+        font-size: 15px;
+        line-height: 1.46666666667;
+        letter-spacing: -1%;
+        text-align: left;
+        font-weight: 400;
+        margin-bottom: 40px;
+    }
+
+    .subscription {
+        flex-direction: row;
+        background-color: #F2F8FA;
+        padding-top: 78px;
+        padding-bottom: 78px;
+    }
+    
+    .subscription-image {
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+        width: 370px;
+        height: 300px;
+    }
+    
+    .subscription-image img {
+        display: block;
+        width: 287px;
+        height: 285px;
+    }
+    
+    .subscription-examine h1 {
+        font-size: 40px;
+        text-align: left;
+    }
+    
+    .subscription-examine p {
+        font-size: 22px;
+        line-height: 1.454545454545455;
+        text-align: left;
+    }
+    
+    .subscription-examine form {
+        position: relative;
+        width: 530px;
+        height: 84px;
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .subscription-examine form input {
+        width: 362px;
+        height: 56px;
+        font-size: 18px;
+        line-height: 1.333333333333333;
+        margin-bottom: 4px;
+        margin-right: 8px;
+    }
+    
+    .subscription-examine form button {
+        width: 160px;
+        height: 54.58px;
+        font-size: 18px;
+        line-height: 1.333333333333333;
+        letter-spacing: -2%;
+        margin-bottom: 4px;
+    }
+    
+    .subscription-examine form span {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-size: 14px;
+        line-height: 1.714285714285714;
+        text-align: left;
+    }
+    
+    .footer footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .footer button {
+        margin-right: 8px;
+    }
+}
+
+/* Custom Grid System - Fix container width*/
+@media  screen and (min-width: 1200px) {
+    .container{
+        max-width: 960px !important;
+    }
+    
+   
+}
+
